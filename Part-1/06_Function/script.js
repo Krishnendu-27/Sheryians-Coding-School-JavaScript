@@ -38,3 +38,72 @@ function abdc(...val) {
 abdc(1, 2, 3, 4, 5, 6);
 //  if ... use in array and obeject then it called spread    //
 
+// return mens from where to came you will back there
+
+/* The first class function */
+// fuction that trat as value , varibale we can treat them like normal value
+
+let j = 12; // 12 is value
+
+j = function my(val) {
+  val();
+};
+//  we can use it like a function actual value
+
+abdc(function () {
+  // we can do this also we cant name this
+  console.log("halo bro");
+});
+
+/* high-order function */
+// which return fucntion or acept a fucntion in parametar
+function home() {
+  return function () {
+    console.log("home in home");
+  };
+}
+// to call this we need 2 ()();
+home()();
+
+/* Pure fucntion and inpure function */
+// pure: which do't change the outside values
+function pure() {
+  console.log("naruto");
+}
+// impure: which change the outside values
+function impure() {
+  return a++;
+}
+
+/* Clouser */
+// one fuction which return another function OR which fucntion return always use parent fucntion variable
+
+/* Lexcial scoping */
+//  we can only acess the variable created in that scope or its child scope . never a parent scope varible acess child scope varible that are created after that
+function efg() {
+  let a = 12; // a acess have in efg, hij , klm.
+  function hij() {
+    let b = 50; // b acess have till hij , klm.
+    function klm() {
+      let c = 60; // c acess have only in klm.
+    }
+  }
+}
+
+/* IIFE(Immediately invoked Function Expresions) */
+// "when creat then call"
+(function () {
+  console.log("tere vhai IIFE he");
+})();
+
+/* Hoesting  */
+// we can acess fucntion before create but we can not use it fucntion expresion
+
+kia();
+funs(); // not work
+function kia() {
+  console.log("kia is a good girl");
+}
+let funs = function () {
+  console.log("kia is a good girl");
+};
