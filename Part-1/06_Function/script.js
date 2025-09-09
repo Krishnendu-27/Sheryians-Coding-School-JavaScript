@@ -107,3 +107,8 @@ function kia() {
 let funs = function () {
   console.log("kia is a good girl");
 };
+// where we use object and their key is function there we can not use fat arror fucntion we need to use normal fucntion.
+
+// diffrence bettwen high order function and closer
+// function: its return the function under a fucntion
+// closer: also return a fucntion but use a some vriable of parent variable
